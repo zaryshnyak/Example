@@ -38,10 +38,10 @@ export default {
   },
   methods: {
     goSignin () {
-      this.$router.push({ name: 'SignIn' })
+      this.$router.push({ name: 'SignIn-component' })
     },
     gohome () {
-      this.$router.push({ name: 'Home' })
+      this.$router.push({ name: 'Home-component' })
     },
     setLogin () {
       $.ajax({
@@ -53,7 +53,7 @@ export default {
         },
         success: (response) => {
           sessionStorage.setItem('auth_token', response.auth_token)
-          this.$router.push({ name: 'Home' })
+          this.$router.push({ name: 'Home-component' })
         },
         error: (response) => {
           if (response.status === 400) {

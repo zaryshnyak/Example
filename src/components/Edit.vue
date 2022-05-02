@@ -48,7 +48,7 @@ export default {
       window.location = '/'
     },
     gohome () {
-      this.$router.push({ name: 'Home' })
+      this.$router.push({ name: 'Home-component' })
     },
     edit () {
       $.ajax({
@@ -64,7 +64,7 @@ export default {
         },
         success: (response) => {
           alert('Your profile has been changed')
-          this.$router.push({ name: 'Home' })
+          this.$router.push({ name: 'Home-component' })
         },
         error: (response) => {
           alert('Something went wrong, please, try again')

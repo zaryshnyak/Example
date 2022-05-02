@@ -5,7 +5,7 @@
 <script>
 import Edit from '../components/Edit'
 export default {
-  name: 'Edit',
+  name: 'Edit-component',
   components: {
     Edit
   }

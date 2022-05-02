@@ -44,10 +44,10 @@ export default {
   },
   methods: {
     goLogin () {
-      this.$router.push({ name: 'Login' })
+      this.$router.push({ name: 'Login-component' })
     },
     gohome () {
-      this.$router.push({ name: 'Home' })
+      this.$router.push({ name: 'Home-component' })
     },
     register () {
       $.ajax({
@@ -62,7 +62,7 @@ export default {
         },
         success: (response) => {
           sessionStorage.setItem('auth_token', response.auth_token)
-          this.$router.push({ name: 'Home' })
+          this.$router.push({ name: 'Home-component' })
         },
         error: (response) => {
           if (response.status === 400) {

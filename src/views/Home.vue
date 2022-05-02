@@ -6,7 +6,7 @@
 <script>
 import Home from '../components/Home'
 export default {
-  name: 'Home',
+  name: 'Home-component',
   components: {
     Home
   }

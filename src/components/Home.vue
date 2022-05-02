@@ -48,23 +48,6 @@
           Here you can:
         </h2>
 <br>
-        <v-row justify="center">
-        <a @click="loadRoom()">
-          <h3 class="subheading mx-3">
-          See our list of rooms
-          </h3>
-        </a>
-        <a @click="loadBook()">
-          <h3 class="subheading mx-3">
-          See our list of books
-          </h3>
-        </a>
-        <a v-if="auth" @click="takenBook()">
-          <h3 class="subheading mx-3">
-          See books that you've taken
-          </h3>
-        </a>
-        </v-row>
       </v-col>
     </v-row>
   </v-container>
@@ -86,7 +69,7 @@ export default {
   },
   computed: {
     auth () {
-      var auth
+      let auth
       if (sessionStorage.getItem('auth_token')) {
         auth = true
       }
@@ -95,8 +78,6 @@ export default {
   },
   data () {
     return {
-      rooms: [],
-      books: [],
       userid: ''
     }
   },
@@ -114,12 +95,6 @@ export default {
       sessionStorage.removeItem('auth_token')
       window.location = '/'
     },
-    loadRoom () {
-      this.$router.push({ name: 'Room' })
-    },
-    loadBook () {
-      this.$router.push({ name: 'Book' })
-    },
     findUser () {
       $.ajax({
         url: 'http://127.0.0.1:8000/auth/users/me/',
@@ -132,9 +107,6 @@ export default {
           alert('Something went wrong, please, try again')
         }
       })
-    },
-    takenBook () {
-      this.$router.push({ name: 'TakenBook', params: { id: this.userid } })
     }
   }
 }
