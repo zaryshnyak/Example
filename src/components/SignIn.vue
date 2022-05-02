@@ -32,7 +32,7 @@
 <script>
 import $ from 'jquery'
 export default {
-  name: 'SignIn',
+  name: 'SignIn-component',
   data () {
     return {
       login: '',
