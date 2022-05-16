@@ -33,7 +33,8 @@ export default {
   data () {
     return {
       login: '',
-      password: ''
+      password: '',
+      auth: false
     }
   },
   methods: {
@@ -45,13 +46,14 @@ export default {
     },
     setLogin () {
       $.ajax({
-        url: 'http://127.0.0.1:8000/auth/token/login/',
-        type: 'POST',
+        url: 'http://127.0.0.1:8000/war/auth/',
+        type: 'GET',
         data: {
           username: this.login,
           password: this.password
         },
         success: (response) => {
+          console.log(response)
           sessionStorage.setItem('auth_token', response.auth_token)
           this.$router.push({ name: 'Home-component' })
         },

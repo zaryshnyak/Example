@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../components/Home.vue'
-import Edit from '../components/Edit.vue'
-import Login from '../components/Login.vue'
-import SignIn from '../components/SignIn.vue'
-
+import Home from '../views/Home'
+import Edit from '../views/Edit'
+import Login from '../views/Login.vue'
+import SignIn from '../views/SignIn'
+console.log('123')
 Vue.use(VueRouter)
 
 const routes = [
@@ -32,7 +32,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
+  // base: process.env.BASE_URL,
   routes
 })
 

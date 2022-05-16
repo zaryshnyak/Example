@@ -36,7 +36,7 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to our library!
+          Welcome!
         </h1>
       </v-col>
 
@@ -83,13 +83,13 @@ export default {
   },
   methods: {
     goLogin () {
-      this.$router.push({ name: 'Login' })
+      this.$router.push({ name: 'Login-component' })
     },
     edit () {
-      this.$router.push({ name: 'Edit' })
+      this.$router.push({ name: 'Edit-component' })
     },
     goSignin () {
-      this.$router.push({ name: 'SignIn' })
+      this.$router.push({ name: 'SignIn-component' })
     },
     goLogout () {
       sessionStorage.removeItem('auth_token')
@@ -97,7 +97,7 @@ export default {
     },
     findUser () {
       $.ajax({
-        url: 'http://127.0.0.1:8000/auth/users/me/',
+        url: 'http://127.0.0.1:8000/war/auth/users/me/',
         headers: { Authorization: 'Token ' + sessionStorage.getItem('auth_token') },
         type: 'GET',
         success: (response) => {

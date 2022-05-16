@@ -52,9 +52,9 @@ export default {
     },
     edit () {
       $.ajax({
-        url: 'http://127.0.0.1:8000/auth/users/me/',
+        url: 'http://127.0.0.1:8000/war/auth/users/me/',
         headers: { Authorization: 'Token ' + sessionStorage.getItem('auth_token') },
-        type: 'PATCH',
+        type: 'POST',
         data: {
           username: this.login,
           password: this.password,

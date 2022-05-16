@@ -51,7 +51,7 @@ export default {
     },
     register () {
       $.ajax({
-        url: 'http://127.0.0.1:8000/auth/users/',
+        url: 'http://127.0.0.1:8000/war/signin/',
         type: 'POST',
         data: {
           username: this.login,

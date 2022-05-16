@@ -1,13 +1,13 @@
 <template>
-  <login />
+  <edit-component />
 </template>
 
 <script>
-import Edit from '../components/Edit'
+// import Edit from '../components/Edit'
 export default {
-  name: 'Edit-component',
-  components: {
-    Edit
-  }
+  name: 'Edit-component'
+  // components: {
+  //   Edit
+  // }
 }
 </script>
